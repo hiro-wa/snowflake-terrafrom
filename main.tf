@@ -50,7 +50,6 @@ resource "snowflake_database_grant" "grant" {
 resource "snowflake_schema" "schema" {
   database     = snowflake_database.db.name
   name         = "TF_DEMO_SCHEMA"
-  is_transient = true
 }
 
 // デフォルトスキーマへの権限付与
