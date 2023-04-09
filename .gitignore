@@ -1,0 +1,4 @@
+snow.env
+*.terraform*
+*.tfstate
+*.tfstate.*
