@@ -63,7 +63,7 @@ resource "snowflake_schema_grant" "schema_default_grant" {
   with_grant_option = false
 }
 
-// 今後作成されるスキーマへの権限付与
+// スキーマへの権限付与（今後作成されるものも含む）
 resource "snowflake_schema_grant" "schema_grant" {
   provider          = snowflake.security_admin
   database_name     = snowflake_database.db.name
@@ -73,7 +73,7 @@ resource "snowflake_schema_grant" "schema_grant" {
   on_future         = true
 }
 
-// 今後作成されるテーブルへの権限付与
+// テーブルへの権限付与（今後作成されるものも含む）
 resource "snowflake_table_grant" "table_grant" {
   provider      = snowflake.security_admin
   database_name = snowflake_database.db.name
@@ -82,7 +82,7 @@ resource "snowflake_table_grant" "table_grant" {
   on_future     = true
 }
 
-// 今後作成されるビューへの権限付与
+// ビューへの権限付与（今後作成されるものも含む）
 resource "snowflake_view_grant" "view_grant" {
   provider      = snowflake.security_admin
   database_name = snowflake_database.db.name
