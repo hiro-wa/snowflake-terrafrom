@@ -24,7 +24,6 @@ resource "snowflake_warehouse" "warehouse" {
   auto_suspend = 60
 }
 
-// --- 追加 ---
 
 // SECURITYADMINロールで操作できるように
 provider "snowflake" {
